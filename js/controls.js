@@ -85,7 +85,6 @@ var manualRotation = quat.create(),
         controls.loadVideo(videoSelect.value.substring(1));
       });
 
-
       projectionSelect.addEventListener("change", function() {
         projection = projectionSelect.value;
       });

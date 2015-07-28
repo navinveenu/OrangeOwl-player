@@ -55,7 +55,7 @@ function initElements() {
   seekBar = document.getElementById("seek-bar");
 
   // Selectors
-  videoSelect = document.getElementById("video-select");
+  videoSelect = "showcase.mp4";
   projectionSelect = document.getElementById("projection-select");
 
   document.getElementById('title-l').style.fontSize = window.outerHeight / 20 + 'px';
