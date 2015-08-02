@@ -57,6 +57,10 @@ function initElements() {
 function runOrangeOwlPlayer() {
   var testvr;
   testvr = webVR.initWebVR();
+  if (testvr == 0) {
+    $('.left').addClass('center').removeClass('left');
+    $('.right').addClass('hidden').removeClass('right');
+  }
   initElements();
   controls.create();
 

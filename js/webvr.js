@@ -5,6 +5,10 @@
     initWebVR: function() {
       if (navigator.getVRDevices) {
         navigator.getVRDevices().then(webVR.vrDeviceCallback);
+        return 1;
+      }
+      else {
+        return 0;
       }
     },
     vrDeviceCallback: function(vrdevs) {
@@ -15,7 +19,7 @@
         }
       }
       if (!vrHMD)
-        return;
+        return 0;
       // Then, find that HMD's position sensor
       for (i = 0; i < vrdevs.length; ++i) {
         if (vrdevs[i] instanceof PositionSensorVRDevice &&
