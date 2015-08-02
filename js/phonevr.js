@@ -15,15 +15,12 @@ function PhoneVR() {
         this.deviceBeta = orientation.beta;
     }.bind(this));
 }
-
 PhoneVR.prototype.orientationIsAvailable = function() {
     return this.deviceAlpha !== null;
 }
-
 PhoneVR.prototype.rotationQuat = function() {
     if (!this.orientationIsAvailable())
         return quat.create(1, 0, 0, 0);
-
     var degtorad = Math.PI / 180; // Degree-to-Radian conversion
     var z = this.deviceAlpha * degtorad / 2;
     var x = this.deviceBeta * degtorad / 2;
@@ -34,7 +31,6 @@ PhoneVR.prototype.rotationQuat = function() {
     var sX = Math.sin(x);
     var sY = Math.sin(y);
     var sZ = Math.sin(z);
-
     // ZXY quaternion construction.
     var w = cX * cY * cZ - sX * sY * sZ;
     var x = sX * cY * cZ - cX * sY * sZ;

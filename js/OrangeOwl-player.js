@@ -3,7 +3,6 @@
  */
 
 "use strict";
-
 var currentScreenOrientation = window.orientation || 0; // active default
 
 var lastUpdateTime = 0;
@@ -60,13 +59,10 @@ function initElements() {
 
   document.getElementById('title-l').style.fontSize = window.outerHeight / 20 + 'px';
   document.getElementById('title-r').style.fontSize = window.outerHeight / 20 + 'px';
-  document.getElementById('message-l').style.fontSize = window.outerHeight / 30 + 'px';
-  document.getElementById('message-r').style.fontSize = window.outerHeight / 30 + 'px';
 }
-
 function runOrangeOwlPlayer() {
-  webVR.initWebVR();
-
+  var testvr;
+  testvr = webVR.initWebVR();
   initElements();
   controls.create();
 
