@@ -35,7 +35,11 @@ function initElements() {
   rightPlay = document.getElementById("right-play");
   canvas = document.getElementById("glcanvas");
   video = document.getElementById("video");
-
+  // Listen for orientation changes
+  window.addEventListener("orientationchange", function() {
+    // Announce the new orientation number
+    alert(window.orientation);
+  }, false);
   // Buttons
   playButton = document.getElementById("play-pause");
   playL = document.getElementById("play-l");
@@ -57,10 +61,11 @@ function initElements() {
 function runOrangeOwlPlayer() {
   var testvr;
   testvr = webVR.initWebVR();
-  if (testvr == 0) {
+ /* if (testvr == 0) {
     $('.left').addClass('center').removeClass('left');
     $('.right').addClass('hidden').removeClass('right');
   }
+  */
   initElements();
   controls.create();
 

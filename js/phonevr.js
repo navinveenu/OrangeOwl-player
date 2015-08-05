@@ -16,7 +16,7 @@ function PhoneVR() {
     }.bind(this));
 }
 PhoneVR.prototype.orientationIsAvailable = function() {
-    return this.deviceAlpha !== null;
+    return this.deviceBeta !== null;
 }
 PhoneVR.prototype.rotationQuat = function() {
     if (!this.orientationIsAvailable())

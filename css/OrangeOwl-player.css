@@ -2,6 +2,14 @@
  * OrangeOwl Web Player: Forked from elevr web player under the MPL license
  */
 
+#warning-message { display: none; }
+@media only screen and (orientation:portrait){
+    #wrapper { display:none; }
+    #warning-message { display:block; }
+}
+@media only screen and (orientation:landscape){
+    #warning-message { display:none; }
+}
 
 body {
   background-color: #000;
@@ -95,7 +103,7 @@ a:active {
 }
 
 #seek-bar {
-	width: 75%;
+	width: 60%;
   float: left;
   margin-top: 3px;
 }

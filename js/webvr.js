@@ -32,6 +32,7 @@
       if (!vrSensor) {
         alert("Found an HMD, but didn't find its orientation sensor?");
       }
+      return 1;
     }
   };
   global.webVR = webVR;

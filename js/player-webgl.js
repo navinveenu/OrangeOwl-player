@@ -244,7 +244,6 @@ var vrHMD, vrSensor;
         webGL.drawOneEye(2, perspectiveMatrix);
       }
 
-
       if (timing.showTiming) {
         webGL.gl.finish();
         timing.end = performance.now();
