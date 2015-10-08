@@ -9,6 +9,9 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="icon" sizes="196x196" href="orangeowl.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <!-- Fragment shader program -->
   <script id="shader-fs" type="x-shader/x-fragment">
@@ -90,7 +93,6 @@
 </head>
 
 <body>
-<div id="wrapper">
   <div id="video-container">
     <!-- Loading Message -->
     <div id="left-load" class="left">
@@ -101,24 +103,26 @@
       <div id="title-r" class="title">Loading Video...</div>
       <div id="message-r" class="message"><img src="orangeowl.png"></div>
     </div>
-    <div id="left-play" class="left" style="display:none;">
+    <div id="left-play" class="left hidden">
       <a id="play-l" class="large-play fa fa-play fa-5x"></a>
     </div>
-    <div id="right-play" class="right" style="display:none;">
+    <div id="right-play" class="right hidden">
       <a id="play-r" class="large-play fa fa-play fa-5x"></a>
     </div>
 
     <canvas id="glcanvas">
       Your browser doesn't appear to support the HTML5 <code>&lt;canvas&gt;</code> element.
     </canvas>
-    <video preload="auto" id="video" loop=true webkit-playsinline>
-      <source src="therelaxatron2.mp4" type='video/mp4'>
+    <video class="hidden" preload="auto" id="video" loop="true" webkit-playsinline crossOrigin="anonymous">
+      <source src="therelaxatron2.mp4" type="video/mp4">
+      <source src="therelaxatron.webm" type="video/webm">
     </video>
         <!-- Video Controls -->
-        <div id="video-controls">
-            <a id="play-pause" class="fa fa-play icon " title="Play"></a>
-            <input type="range" id="seek-bar" value="0">
-            <a id="loop" class="fa fa-chain-broken icon rfloat" title="Stop Looping"></a>
+        <div id="video-controls" class="hidden">
+          <a id="play-pause" class="fa fa-play icon" title="Play"></a>
+
+
+          <input type="range" id="seek-bar" value="0">
 
             <a id="mute" class="fa fa-volume-up icon rfloat" title="Mute"></a>
 
