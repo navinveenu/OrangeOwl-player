@@ -78,7 +78,7 @@ function setupControls() {
 }
 
 function runOrangeOwlPlayer() {
-  if (called.runEleVRPlayer) {
+  if (called.runOrangeOwlPlayer) {
     return;
   }
 
@@ -119,7 +119,7 @@ function runOrangeOwlPlayer() {
 
   initFromSettings(window.location.hash || window.location.search);
 
-  called.runEleVRPlayer = true;
+  called.runOrangeOwlPlayer = true;
 }
 
 function initFromSettings(newSettings) {
